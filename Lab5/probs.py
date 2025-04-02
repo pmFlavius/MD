@@ -155,5 +155,3 @@ def P2(U1,U2,U3):#problema2
         else:
             print('Fals')
 
-def P4(Univers):
-

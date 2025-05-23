@@ -5,3 +5,4 @@
 <h5>Lab7: Multimi</h5>
 <h5>Lab8: Functii</h5>
 <h5>Lab10: Relatii</h5>
+<h5>Lab12: Relatii(2)</h5>

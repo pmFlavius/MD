@@ -44,12 +44,14 @@ def MatAND(A,B):
     return C
 
 
-def MatProdBool(A,B):
-    C=np.zeros((len(A),len(B[0])))
-    C.astype(int)
-    for i in range(len(A)):
-        for j in range(len(A[i])):
+def MatProdBool(A, B):
+    n, m = len(A), len(B[0])
+    C = np.zeros((n, m), dtype=int)  
+
+    for i in range(n):
+        for j in range(m):
+            val = 0
             for k in range(len(B)):
-                C[i][j]=C[i][j] or A[i][k] and B[k][j]
-                
+                val = val or (A[i][k] and B[k][j])
+            C[i][j] = val
     return C

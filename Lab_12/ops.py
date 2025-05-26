@@ -47,3 +47,22 @@ def reprezentareMat(relatie,n):
         M[a-1][b-1]=1
 
     return M
+#exemplu de graf Hasse
+def Hasse():
+    graf={
+        'a':['b'],
+        'b': ['c','d'],
+        'c':[],
+        'd':[]
+    }
+
+    #parcurgem fiecare nod din diagrama hasse
+    for nod in graf:
+        lista_nod = graf[nod]
+        print("Nodul %c este acoperit de: " %nod,end=" ")
+
+        #parcurgem fiecare nod care acopera nodul curent
+        for nd in lista_nod:
+            print(" %c " %nd,end=" ")
+
+        print()

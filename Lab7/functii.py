@@ -37,6 +37,7 @@ def binar_set_U(U):
     for x in U:
         n=n<<1 | 1
     return n
+
 def binar_sets(U,V):
     n=0
     for x in U:
@@ -45,3 +46,16 @@ def binar_sets(U,V):
         else:
             n=n<<1
     return n
+
+
+def multime_putere(S, n):
+    np = 1 << n  
+    PS = []      
+    for i in range(np):
+        submultime = []
+        for j in range(n):
+            if (i >> j) & 1:
+                submultime.append(S[j])
+        PS.append(submultime)
+
+    return PS

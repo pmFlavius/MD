@@ -35,7 +35,7 @@ def P4():
     nr2=binar_sets(U,B)
     print('\nA=', bin(nr1))
     print('\nB=', bin(nr2))
-    conj=~ nr1
+    conj = (~nr1) & ((1 << len(U)) - 1)
     reu=nr1 | nr2
     intersec=nr1&nr2
     xor=nr1^nr2
